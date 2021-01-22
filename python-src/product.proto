@@ -1,0 +1,29 @@
+syntax = "proto3";
+// Defines which proto version to be used
+option go_package=".;product_proto";
+
+message ProductRequest{
+    int32 id = 1;
+}
+
+// Defining the data exchange data structure
+message ProductResponse{
+    string product_name = 1;
+    int32 id = 2;
+    string description = 3;
+    repeated Tag tags = 4;
+
+   // enum Category {
+    //}
+}
+
+message Tag {
+    string title = 1;
+}
+
+//message ReservedFieldExample {
+//    string title = 1;
+//    reserved 2;
+//    reserved "test";
+//    string test = 2;
+//}

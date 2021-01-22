@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+    go-workspace:
+        image: golang:1.15.6-buster
+        container_name: protobuf-go
+        entrypoint: tail -f /dev/null
+        volumes: 
+          - ./go-src:/go-demo/src/
+        ports:
+          - "9124:9124"
+
+    python-workspace:
+        image: python:3.8.7-buster
+        container_name: protobuf-python
+        entrypoint: tail -f /dev/null
+        volumes:
+            - ./python-src:/python-demo/src/
+        ports:
+            - "9123:9123"
+
+
